@@ -50,7 +50,7 @@ function Signup() {
         console.log("Form Submitted", formData);
 
         try {
-            const url = "https://tech--connect.azurewebsites.net/auth/signup";
+            const url = "https://clubportal-3s4b.onrender.com/auth/signup";
             const response = await fetch(url, {
                 method: "POST",
                 headers: {

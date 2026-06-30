@@ -56,7 +56,7 @@ const QuizSettings = ({ totalMarks, totalQuestions }) => {
   const fetchQuizSettings = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`https://tech--connect.azurewebsites.net/questions/iste/${sig}/settings`, {
+      const response = await fetch(`https://clubportal-3s4b.onrender.com/questions/iste/${sig}/settings`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const QuizSettings = ({ totalMarks, totalQuestions }) => {
       
       console.log("Submitting settings:", settingsToSubmit);
       
-      const response = await fetch(`https://tech--connect.azurewebsites.net/questions/iste/${sig}/settings/update`, {
+      const response = await fetch(`https://clubportal-3s4b.onrender.com/questions/iste/${sig}/settings/update`, {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",

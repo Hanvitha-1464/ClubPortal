@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://tech--connect.azurewebsites.net/',
+        target: 'https://clubportal-3s4b.onrender.com/',
         changeOrigin: true,
       }
     },

@@ -40,7 +40,7 @@ const AcmstuLink = () => {
         const token = userData.token; // Get token from local storage
         if (!token) throw new Error("Unauthorized: No token found");
 
-        const res = await axios.get("https://tech--connect.azurewebsites.net/coding/acm/getcode/student", {
+        const res = await axios.get("https://clubportal-3s4b.onrender.com/coding/acm/getcode/student", {
           headers: {
             Authorization: `Bearer ${token}`, // Send token in headers
           },

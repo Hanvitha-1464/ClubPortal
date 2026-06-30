@@ -83,7 +83,7 @@ const QuizPage = () => {
             return;
         }
         // First, fetch quiz settings - this will tell us if the quiz exists and is available
-        fetch(`https://tech--connect.azurewebsites.net/questions/${club}/${sig}/settings/student`, {
+        fetch(`https://clubportal-3s4b.onrender.com/questions/${club}/${sig}/settings/student`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${userData.token}`,
@@ -159,7 +159,7 @@ const QuizPage = () => {
             return;
         }
         
-        fetch(`https://tech--connect.azurewebsites.net/questions/${club}/${sig}/get/student`, {
+        fetch(`https://clubportal-3s4b.onrender.com/questions/${club}/${sig}/get/student`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${userData.token}`,
@@ -269,7 +269,7 @@ const QuizPage = () => {
     
         console.log('Payload being sent:', payload);
         try {
-            const response = await fetch(`https://tech--connect.azurewebsites.net/results/${club}/${sig}/submit`, {
+            const response = await fetch(`https://clubportal-3s4b.onrender.com/results/${club}/${sig}/submit`, {
                 method: "POST",
                 headers: {
                     'Authorization': `Bearer ${userData.token}`,

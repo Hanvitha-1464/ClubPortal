@@ -27,7 +27,7 @@ const ResultsPage = () => {
       }
 
       // Fetch results from the server
-      fetch(`https://tech--connect.azurewebsites.net/results/user/${userInfo.rollNumber}`, {
+      fetch(`https://clubportal-3s4b.onrender.com/results/user/${userInfo.rollNumber}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

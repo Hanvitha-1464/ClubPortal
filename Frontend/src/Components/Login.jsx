@@ -33,7 +33,7 @@ function Login() {
         }
 
         try {
-            const response = await fetch("https://tech--connect.azurewebsites.net/auth/login", {
+            const response = await fetch("https://clubportal-3s4b.onrender.com/auth/login", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

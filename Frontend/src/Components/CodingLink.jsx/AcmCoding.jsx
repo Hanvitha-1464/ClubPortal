@@ -52,7 +52,7 @@ const AcmCode = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await axios.get("https://tech--connect.azurewebsites.net/coding/acm/getcode", {
+      const res = await axios.get("https://clubportal-3s4b.onrender.com/coding/acm/getcode", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -71,12 +71,12 @@ const AcmCode = () => {
     if (!url) return;
     try {
       if (editing) {
-        await axios.put(`https://tech--connect.azurewebsites.net/coding/acm/update/${editing}`, { url }, {
+        await axios.put(`https://clubportal-3s4b.onrender.com/coding/acm/update/${editing}`, { url }, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEditing(null);
       } else {
-        await axios.post("https://tech--connect.azurewebsites.net/coding/acm/addcode", { url }, {
+        await axios.post("https://clubportal-3s4b.onrender.com/coding/acm/addcode", { url }, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
@@ -90,7 +90,7 @@ const AcmCode = () => {
 
   const deleteLink = async (id) => {
     try {
-      await axios.delete(`https://tech--connect.azurewebsites.net/coding/acm/delete/${id}`, {
+      await axios.delete(`https://clubportal-3s4b.onrender.com/coding/acm/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchLinks();

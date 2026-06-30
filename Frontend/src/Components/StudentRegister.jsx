@@ -215,7 +215,7 @@ const StudentRegistration = () => {
         const registrationPromises = [];
         for (const registration of registrationData.registrations) {
           const registrationPath = `${registration.clubName.toLowerCase()}/${registration.sigName.toLowerCase()}/register`;
-          const registrationPromise = fetch(`https://tech--connect.azurewebsites.net/students/${registrationPath}`, {
+          const registrationPromise = fetch(`https://clubportal-3s4b.onrender.com/students/${registrationPath}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

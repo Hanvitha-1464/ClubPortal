@@ -11,7 +11,7 @@ const TalksPage = () => {
 
   const fetchTalks = async () => {
     try {
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/gettalks");
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/gettalks");
       setTalks(response.data);
     } catch (error) {
       console.error("Error fetching talks:", error);

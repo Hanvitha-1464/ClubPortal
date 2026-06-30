@@ -39,7 +39,7 @@ const GetTalks = () => {
     }
     try {
      
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/ieee/gettalks", {
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/ieee/gettalks", {
         headers: { Authorization: `Bearer ${userData.token}` },
       });
 

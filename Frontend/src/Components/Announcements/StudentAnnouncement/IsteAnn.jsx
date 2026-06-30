@@ -39,7 +39,7 @@ const GetstuIsteAnnouncements = () => {
     }
     try {
       
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/iste/get/student", {
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/iste/get/student", {
         headers: {
           Authorization: `Bearer ${userData.token}`,
         },

@@ -41,7 +41,7 @@ const GetstuIeeeAnnouncements = () => {
     }
     try {
       
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/ieee/get/student", {
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/ieee/get/student", {
         headers: {
           Authorization: `Bearer ${userData.token}`,
         },

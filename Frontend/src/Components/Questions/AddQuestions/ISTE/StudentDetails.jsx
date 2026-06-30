@@ -50,7 +50,7 @@ const AdminDashboard = () => {
           } catch (e) {
             console.error("Invalid token format");
           }
-        const response = await fetch(`https://tech--connect.azurewebsites.net/students/iste/${sig}/all`, {
+        const response = await fetch(`https://clubportal-3s4b.onrender.com/students/iste/${sig}/all`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

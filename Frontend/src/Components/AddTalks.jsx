@@ -13,7 +13,7 @@ const AddTalk = () => {
 
   const fetchTalks = async () => {
     try {
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/gettalks");
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/gettalks");
       setTalks(response.data);
     } catch (error) {
       console.error("Error fetching talks:", error);
@@ -23,7 +23,7 @@ const AddTalk = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://tech--connect.azurewebsites.net/api/addtalk", {
+      const response = await axios.post("https://clubportal-3s4b.onrender.com/api/addtalk", {
         title,
         talkUrl,
         date, // Include date field
@@ -39,7 +39,7 @@ const AddTalk = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://tech--connect.azurewebsites.net/api/deletetalk/${id}`);
+      await axios.delete(`https://clubportal-3s4b.onrender.com/api/deletetalk/${id}`);
       setTalks(talks.filter((talk) => talk._id !== id));
     } catch (error) {
       console.error("Error deleting talk:", error);

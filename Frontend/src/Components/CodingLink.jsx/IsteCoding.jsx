@@ -52,7 +52,7 @@ const IsteCode = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await axios.get("https://tech--connect.azurewebsites.net/coding/iste/getcode", {
+      const res = await axios.get("https://clubportal-3s4b.onrender.com/coding/iste/getcode", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -71,12 +71,12 @@ const IsteCode = () => {
     if (!url) return;
     try {
       if (editing) {
-        await axios.put(`https://tech--connect.azurewebsites.net/coding/iste/update/${editing}`, { url }, {
+        await axios.put(`https://clubportal-3s4b.onrender.com/coding/iste/update/${editing}`, { url }, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEditing(null);
       } else {
-        await axios.post("https://tech--connect.azurewebsites.net/coding/iste/addcode", { url }, {
+        await axios.post("https://clubportal-3s4b.onrender.com/coding/iste/addcode", { url }, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
@@ -90,7 +90,7 @@ const IsteCode = () => {
 
   const deleteLink = async (id) => {
     try {
-      await axios.delete(`https://tech--connect.azurewebsites.net/coding/iste/delete/${id}`, {
+      await axios.delete(`https://clubportal-3s4b.onrender.com/coding/iste/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchLinks();

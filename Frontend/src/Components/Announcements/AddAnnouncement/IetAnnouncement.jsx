@@ -50,7 +50,7 @@ const IetAnnouncements = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/iet/get", {
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/iet/get", {
         headers: {
           Authorization: `Bearer ${userData.token}`,
         },
@@ -81,7 +81,7 @@ const IetAnnouncements = () => {
       const newAnnouncement = { title, message }; // ✅ Capture input values
   
       const response = await axios.post(
-        "https://tech--connect.azurewebsites.net/api/iet/add",
+        "https://clubportal-3s4b.onrender.com/api/iet/add",
         newAnnouncement,
         {
           headers: {
@@ -116,7 +116,7 @@ const IetAnnouncements = () => {
         throw new Error("No token found, user is not authenticated.");
       }
   
-      await axios.delete(`https://tech--connect.azurewebsites.net/api/iet/delete/${id}`, {
+      await axios.delete(`https://clubportal-3s4b.onrender.com/api/iet/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${userData.token}`, // ✅ Include token
         },

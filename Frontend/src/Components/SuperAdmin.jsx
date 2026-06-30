@@ -7,7 +7,7 @@ export default function SuperAdminPanel() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     console.log("Token in localStorage:", token);
-    fetch("https://tech--connect.azurewebsites.net/superadmin/get-all-users") // Correct API endpoint
+    fetch("https://clubportal-3s4b.onrender.com/superadmin/get-all-users") // Correct API endpoint
       .then((res) => res.json())
       .then((data) => setUsers(data.users)) // Access users array from response
       .catch((err) => console.error("Error fetching users:", err));
@@ -23,7 +23,7 @@ export default function SuperAdminPanel() {
         return;
     }
 
-    fetch("https://tech--connect.azurewebsites.net/superadmin/make-admin", {
+    fetch("https://clubportal-3s4b.onrender.com/superadmin/make-admin", {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",

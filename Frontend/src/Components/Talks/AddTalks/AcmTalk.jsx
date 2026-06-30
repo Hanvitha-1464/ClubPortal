@@ -51,7 +51,7 @@ const AcmTalk = () => {
   const fetchTalks = async () => {
     try {
       
-      const response = await axios.get("https://tech--connect.azurewebsites.net/api/acm/gettalks", {
+      const response = await axios.get("https://clubportal-3s4b.onrender.com/api/acm/gettalks", {
         headers: { Authorization: `Bearer ${userData.token}` },
       });
 
@@ -70,7 +70,7 @@ const AcmTalk = () => {
     try {
      
       const response = await axios.post(
-        "https://tech--connect.azurewebsites.net/api/acm/addtalk",
+        "https://clubportal-3s4b.onrender.com/api/acm/addtalk",
         { title, talkUrl, date },
         { headers: { Authorization: `Bearer ${userData.token}` } }
       );
@@ -97,7 +97,7 @@ const AcmTalk = () => {
 
     try {
      
-      await axios.delete(`https://tech--connect.azurewebsites.net/api/acm/deletetalk/${id}`, {
+      await axios.delete(`https://clubportal-3s4b.onrender.com/api/acm/deletetalk/${id}`, {
         headers: { Authorization: `Bearer ${userData.token}` },
       });
 
