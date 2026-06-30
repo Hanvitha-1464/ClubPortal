@@ -56,12 +56,12 @@ app.use('/status', QuizStatusRoutes)    ;
 app.use('/api/doubts', DoubtRoutes);
 app.use('/coding', CodingRoutes);
 app.use('/api/preferences',PreferenceRoutes);
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("Frontend/dist")); 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html")); 
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("Frontend/dist")); 
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html")); 
+//   });
+// }
 
 app.listen(PORT, () => {
     console.log("Server is listening");
