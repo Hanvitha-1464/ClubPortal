@@ -19,9 +19,8 @@ const PreferenceRoutes=require('./Routes/PreferenceRoutes');
 
 app.use(cors({
   origin: [
-    "https://tech-connect-drab.vercel.app",  // Netlify frontend
-    process.env.FRONTEND_URL,
-    "https://local:5173"
+    "https://techconnect-chi.vercel.app", 
+    "http://local:5173"
       // Another allowed frontend URL (if defined)
   ], // Allow only frontend
     credentials: true, // Allow cookies/authentication headers
