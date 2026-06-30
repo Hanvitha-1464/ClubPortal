@@ -1,5 +1,5 @@
 # TechConnect
-
+https://techconnect-chi.vercel.app/
 ## Project Overview
 TechConnect is a dynamic and user-friendly platform designed to streamline tech club recruitment processes. This centralized system eliminates the hassle of manual management, providing an efficient recruitment experience for both students and organizers.
 
